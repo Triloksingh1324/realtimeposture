@@ -41,7 +41,7 @@ class VideoStream:
                 ret, frame = self.cap.read()
                 if not ret:
                     break
-
+                frame=cv2.flip(frame,1)
                 output_image, pose_landmarks = self.pose_detector.detect_pose(frame)
                 if pose_landmarks:
                     landmarks = [(landmark.x, landmark.y, landmark.z) for landmark in pose_landmarks.landmark]

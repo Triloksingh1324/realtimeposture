@@ -30,4 +30,4 @@ def video_feed():
     return video_stream.stream()
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5007)
+    app.run(debug=True,port=5000)

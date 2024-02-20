@@ -14,6 +14,6 @@ class PoseDetector:
 
         # Draw pose landmarks on the output image
         if results.pose_landmarks:
-            self.mp_drawing.draw_landmarks(output_image, results.pose_landmarks, self.mp_pose.POSE_CONNECTIONS,self.mp_drawing.DrawingSpec(color=(0, 255, 0), thickness=2, circle_radius=2))
+            self.mp_drawing.draw_landmarks(output_image, results.pose_landmarks, self.mp_pose.POSE_CONNECTIONS,connection_drawing_spec=self.mp_drawing.DrawingSpec(color=(0, 255, 0), thickness=2, circle_radius=2))
 
         return output_image, results.pose_landmarks
