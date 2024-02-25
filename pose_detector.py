@@ -4,7 +4,7 @@ import mediapipe as mp
 class PoseDetector:
     def __init__(self):
         self.mp_pose = mp.solutions.pose
-        self.pose = self.mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.4, model_complexity=2)
+        self.pose = self.mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.7, model_complexity=2)
         self.mp_drawing = mp.solutions.drawing_utils
 
     def detect_pose(self, image):
