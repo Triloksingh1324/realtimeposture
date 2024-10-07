@@ -11,7 +11,7 @@ class BicepClassifier:
         self.bicep_count = 0
 
     def classify(self, landmarks, prev_state, output_image):
-        # Your classification logic here
+    
 
         left_elbow_angle = AngleCalculator().calculate_angle(landmarks[mp.solutions.pose.PoseLandmark.LEFT_SHOULDER.value],
                                             landmarks[mp.solutions.pose.PoseLandmark.LEFT_ELBOW.value],
